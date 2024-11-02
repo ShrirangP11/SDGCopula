@@ -4,7 +4,9 @@
 .inst <- .packages %in% installed.packages()
 if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
 # Load packages into session
-lapply(.packages, require, character.only=TRUE)
+lapply(.packages, FUN = function(X) {
+  do.call("require", list(X)) 
+})
 
 
 #Function to for parametric density estimation of marginals
