@@ -1,5 +1,5 @@
 # Prerequisite packages
-.packages = c('mvtnorm', 'copula', 'fitdistrplus', 'plotrix', 'psych', 'ggcorrplot', 'gridExtra', 'reshape2', 'ggplot2')
+.packages = c('mvtnorm', 'copula', 'fitdistrplus', 'plotrix', 'psych', 'ggcorrplot', 'gridExtra', 'reshape2', 'ggplot2', 'las')
 # Install CRAN packages (if not already installed)
 .inst <- .packages %in% installed.packages()
 if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
@@ -357,7 +357,7 @@ pairs <- function(df) pairs.panels(df, method='spearman')
 #' @export
 #'
 #' @examples RMSE(orig=data,syn=synthetic_data)
-RMSE <- function(orig, syn) return(sqrt(sum((tonumeric(df)-tonumeric(simulated))^2)))
+RMSE <- function(orig, syn) return(sqrt(sum((tonumeric(orig)-tonumeric(syn))^2)))
 
 
 #Function to return cosine similarity between two datasets
