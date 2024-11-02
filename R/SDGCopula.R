@@ -223,8 +223,8 @@ histfit <- function(df,position,ylim){
 corrfit <- function(orig, syn){
   orig <- tonumeric(orig)
   syn <- tonumeric(syn)
-  p1 <- ggcorrplot::ggcorrplot(cor(orig, method=c('spearman')), title = 'Original Dataset')+theme(plot.title = element_text(hjust=0.5))
-  p2 <- ggcorrplot::ggcorrplot(cor(syn, method=c('spearman')), title='Synthetic Dataset')+theme(plot.title = element_text(hjust=0.5))
+  p1 <- ggcorrplot::ggcorrplot(cor(orig, method=c('spearman')), title = 'Original Dataset', ggtheme = theme(plot.title = element_text(hjust=0.5)))+theme(plot.title = element_text(hjust=0.5))
+  p2 <- ggcorrplot::ggcorrplot(cor(syn, method=c('spearman')), title='Synthetic Dataset', ggtheme = theme(plot.title = element_text(hjust=0.5)))
   gridExtra::grid.arrange(grobs=list(p1, p2), ncol=2)
 }
 
