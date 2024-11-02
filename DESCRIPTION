@@ -18,5 +18,7 @@ Depends:
     mvtnorm,
     plotrix,
     psych,
-    reshape2
+    reshape2,
+    MASS,
+    lsa
 RoxygenNote: 7.3.2
