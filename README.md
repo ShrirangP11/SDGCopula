@@ -7,7 +7,8 @@ You can install this package with using
 ``` r
 remotes::install_github("ShrirangP11/SDGCopula")
 ```
-## ExampleTo use the function provided by this package, run the following code.
+## Example
+To use the function provided by this package, run the following code.
 ```r
 library(SDGCopula)
 original <- iris
