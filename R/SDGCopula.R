@@ -203,16 +203,19 @@ fitCop <- function(dataframe, copula, parametric, dof){
 
 
 #Function to return diagnostic histograms(2 histograms side-by-side)
-histfit <- function(df,position,ylim){
+histfit <- function(df,position,ylim,xlab){
   l <- list(df[,1], df[,2])
   if(missing(position)){
     position='topright'
   }
+   if(missing(xlab)){
+    xlab='Value'
+  }
   if(missing(ylim)){
-    plotrix::multhist(l, xlab='Value', ylab='Frequency', col=c('red', 'blue'))
+    plotrix::multhist(l, xlab=xlab, ylab='Frequency', col=c('red', 'blue'))
     legend(position, legend=colnames(df), fill=c('red', 'blue'))
   }else{
-    plotrix::multhist(l, xlab='Value', ylab='Frequency', col=c('red', 'blue'),ylim=ylim)
+    plotrix::multhist(l, xlab=xlab, ylab='Frequency', col=c('red', 'blue'),ylim=ylim)
     legend(position, legend=colnames(df), fill=c('red', 'blue'))
   }
 }
