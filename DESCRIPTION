@@ -6,7 +6,7 @@ Author: Shrirang Pund, Bharat Jambhulkar
 Maintainer: Shrirang Pund <shrirang.p30@gmail.com>, Bharat Jambhulkar <ba.jambhulkar@gmail.com>
 Description: The R package SDGCopula generates synthetic data using copulas. It can generate tabular data consisting of continuous, integer, and categorical variables. 
     
-License: Apache License 2.0
+
 Encoding: UTF-8
 LazyData: true
 Depends: 
