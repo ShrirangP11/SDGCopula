@@ -14,5 +14,4 @@ library(SDGCopula)
 original <- iris
 synthetic <- fitCop(original, copula='normal', parametric=FALSE)
 ```
-## License
-This package is licensed under Apache 2.0 license.
+
